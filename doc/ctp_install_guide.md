@@ -82,7 +82,7 @@
     grep: 3.0-1  
     sed: 4.2.2-3  
     ```
-    Please refer to appendix [How to install packages with customized version in cygwin](#install-the-old-versions).  
+    Please refer to appendix [How to install packages with customized version in cygwin](#how-to-install-packages-with-customized-version-in-cygwin).  
     * Note: why install the specific versions?  
         Take 'grep' as an example:  
         We found, '\r' was appended in the texts on windows. By our investigation, we found information about it:
