@@ -83,16 +83,18 @@
     sed: 4.2.2-3  
     ```
     Please refer to appendix [How to install packages with customized version in cygwin](#install-the-old-versions).  
-    * Note: why install the assigned versions?  
+    * Note: why install the specific versions?  
         Take 'grep' as an example:  
-        Sometimes, '\r' is appended in the texts on windows.
-        ```
-        This build modifies the behavior of grep to no longer force text mode on 
-        binary-mounted file descriptors.  Since this includes pipelines by 
-        default, this means that if you pipe text data through a pipeline (such 
-        as the output of a windows program), you may need to insert a call to 
-        d2u to sanitize your input before passing it to grep.
-        ```
+        We found, '\r' was appended in the texts on windows. By our investigation, we found information about it:
+        >
+        > This build modifies the behavior of grep to no longer force text mode on 
+        > binary-mounted file descriptors.  Since this includes pipelines by 
+        > default, this means that if you pipe text data through a pipeline (such 
+        > as the output of a windows program), you may need to insert a call to 
+        > d2u to sanitize your input before passing it to grep.  
+        > 
+        > Source: http://cygwin.1069669.n5.nabble.com/ANNOUNCEMENT-TEST-Cygwin-3-1-0-0-2-td147352.html
+
         We do not intend to modify test cases, since the cases are used both by linux and windows platform.  
         So we need to use grep before 3.0-2.  
   * Change environment variable `PATH`  
