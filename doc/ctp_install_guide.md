@@ -84,8 +84,8 @@
     ```
     Please refer to appendix [How to install packages with customized version in cygwin](#how-to-install-packages-with-customized-version-in-cygwin).  
     * Note: why install the specific versions?  
-        Take 'grep' as an example:  
-        We found, '\r' was appended in the texts on windows. By our investigation, we found information about it:
+        Take `'grep'` as an example:  
+        We found, `'\r'` was appended in the texts on windows. By our investigation, we found information about it:
         >
         > This build modifies the behavior of grep to no longer force text mode on 
         > binary-mounted file descriptors.  Since this includes pipelines by 
@@ -95,8 +95,8 @@
         > 
         > Source: http://cygwin.1069669.n5.nabble.com/ANNOUNCEMENT-TEST-Cygwin-3-1-0-0-2-td147352.html
 
-        We do not intend to modify test cases, since the cases are used both by linux and windows platform.  
-        So we need to use grep before 3.0-2.  
+        We do not intend to modify test cases, since the cases are used by both linux and windows platform.  
+        So we need to use `grep` before `'3.0-2'`.  
   * Change environment variable `PATH`  
     Add `'C:\cygwin64\bin'` in the `PATH`  
 * ### Install git  
@@ -109,7 +109,7 @@
 
 ## 3. Install CTP as Regression Test platform
 
-  Follow last chapter to install CTP as general installation. Then let's continue to support regression test.
+  Follow above chapters to install CTP as general installation. Then let's continue to support regression test.
 
 * ### Provide Common Configuration
 
@@ -163,7 +163,7 @@
 
   There are two ways. Let's take `'grep'` as an example.
     
-  * **The first way, install from Internet**
+  * **The first way, install from internet**
 
     1. Start cygwin installation file `'setup-x86_64.exe'`
   
@@ -174,7 +174,7 @@
        (1) If `'3.0-1'` can be shown automatically, choose `'Pending'` in `'View'` field, to check the pending list is correct:   
           + This package is in the list  
           + If there are other packages which you do not want to update this time, please click the second columns of these lines on by one to mark them as `'keep'`.  
-          + Note: Check the pending list is important, since new versions of other packages are put in pending list and will be updated automatically. For example, last time, I reverted `'gawk'` to old version, and this time, I try to install old version of `'grep'` and forget to check the pending list, `'gawk'` will be updated to the newer version at this time.  So we'd better to install `'gawk'`, `'grep'`, `'sed'` at once, instead of install them separately.          
+          + Note: check the pending list is important, since new versions of other packages are put in pending list and will be updated automatically. For example, last time, I reverted `'gawk'` to old version, and this time, I try to install old version of `'grep'` and forget to check the pending list, `'gawk'` will be updated to the newer version at this time.  So we'd better to install `'gawk'`, `'grep'`, `'sed'` at once, instead of install them separately.          
           
        (2) If `'3.0-1'` cannot be shown automatically, cancel this installation, and use the second installation method below.  
       
